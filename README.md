@@ -30,7 +30,8 @@ Note : you can choose different components, this is just what we used to achieve
     <br>
     
 # Hardware setup
-To be added
+Connection schematic :
+![schematic](/images/Schematic_iot-test_2022-01-26.png)
 
 # Software setup
 To be added
