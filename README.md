@@ -10,25 +10,25 @@ The device is based on the ESP32 platform, and utilizes a GSM module to send loc
 
 # What do you need (to build this for yourself)
 Note : you can choose different components, this is just what we used to achieve the shown results.<br>
-  a.*Hardware components* <br>
-    - WEMOS-ESP32 ESP-WROOM-32 (it was chosen because it includes a pre-soldered battery slot)<br>
-    - Battery (we chose a 2800mAh battery extracted from an old laptop battery pack) <br>
-    - SIM800L module<br>
-    - Power switch for SIM800L module (optional)<br>
-    - GPSMV2 module<br>
-    - A computer that has atleast 2 GB of RAM and 2 cpu cores, that runs Windows, Linux, MacOS or ChromeOS (for Arduino IDE)<br> 
-    - A computer capable of running linux Debian buster or newer, MongoDB and python3 (again, 2GB ram and 2 cores should suffice)<br>
-  b.*Software components* <br>
-    - Arduino IDE https://www.arduino.cc/en/Guide <br>
-    - ESP32 software for Arduino IDE https://techexplorations.com/guides/esp32/begin/idewin/ <br>
-    - HereMAPS freemium developer account (for API key required in web app) https://developer.here.com/#<br>
-    - Debian linux (buster or newer) https://www.debian.org/<br>
-    - MongoDB and pymongo driver (instructions below)<br>
-    - Flask and python3 (instructions below)<br>
-    - My SMS library for ESP32 (SMSmanager.h) <br>
-    - My GPRS library for ESP32(NetworkManager.h) <br>
-    - TinyGPS++ library written by Mikal Hart https://github.com/mikalhart/TinyGPSPlus<br> 
-    <br>
+a.*Hardware components* <br>
+- WEMOS-ESP32 ESP-WROOM-32 (it was chosen because it includes a pre-soldered battery slot)<br>
+- Battery (we chose a 2800mAh battery extracted from an old laptop battery pack) <br>
+- SIM800L module<br>
+- Power switch for SIM800L module (optional)<br>
+- GPSMV2 module<br>
+- A computer that has atleast 2 GB of RAM and 2 cpu cores, that runs Windows, Linux, MacOS or ChromeOS (for Arduino IDE)<br> 
+- A computer capable of running linux Debian buster or newer, MongoDB and python3 (again, 2GB ram and 2 cores should suffice)<br>
+b.*Software components* <br>
+- Arduino IDE https://www.arduino.cc/en/Guide <br>
+- ESP32 software for Arduino IDE https://techexplorations.com/guides/esp32/begin/idewin/ <br>
+- HereMAPS freemium developer account (for API key required in web app) https://developer.here.com/#<br>
+- Debian linux (buster or newer) https://www.debian.org/<br>
+- MongoDB and pymongo driver (instructions below)<br>
+- Flask and python3 (instructions below)<br>
+- My SMS library for ESP32 (SMSmanager.h) <br>
+- My GPRS library for ESP32(NetworkManager.h) <br>
+- TinyGPS++ library written by Mikal Hart https://github.com/mikalhart/TinyGPSPlus<br> 
+<br>
     
 # Hardware setup
 Connection schematic : <br>
@@ -56,7 +56,6 @@ For my configuration i used TTGO-LoRa-32 OLED V1 (in Arduino Board manager), cha
 
 After you successfuly set up your IDE, you are ready to compile the arduino project GPSTrackerMain, download the folder or clone the repo, then open GPSTrackerMain.ino .<br>
 - Change the host URL to the app server (instructions below how to set it up), change "internet.vodafone.gr" to the APN (access point name) of your network provider and change the pins for GSM and GPS modules (in Serial1 and Serial2 variables).
-<br><br>
 b.*Setting up the Web app (backend and frontend)*<br>
 The ESP32 microcontroller we just programmed, will send location data to a web app which uses python and mongodb for backend and Flask for front end.<br>
 #### Note : the instructions below are for linux Debian buster or newer
