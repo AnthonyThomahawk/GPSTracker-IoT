@@ -117,9 +117,12 @@ Screenshot of ESP32 program running (Debugged with PC serial monitor) :
 <br>
 Screenshot of backend and frontend running on Debian :
 ![img5](/images/serveroutput.png)
+<br>
 Screenshot of application interface :
 ![img6](/images/viewUI.png)
+<br>
 View location history:
 ![img7](/images/viewlocationhistory.png)
+<br>
 View last location:
 ![img8](/images/viewlastlocation.png)
