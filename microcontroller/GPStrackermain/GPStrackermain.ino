@@ -1,15 +1,14 @@
-#include "SMSmanager.h"
 #include "NetworkManager.h"
 #include "TinyGPS++.h"
 
-#define DEMO_MODE 0
+#define DEMO_MODE 1
 
 NetworkManager mygprs;
 TinyGPSPlus mygps;
-const String host = "";
-float demo_lat = 38.001496;
-float demo_lng = 23.733700; 
-//const String myNumber = ""; // change this to your number
+const String host = "http://79.167.172.232:8000/"; // change this to your external IP
+const String APN = "internet.vodafone.gr";
+float demo_lat[4] = {37.990551610988796, 37.99063531638939, 37.99102394735534, 37.991394639604096};
+float demo_lng[4] = {23.685783503223963, 23.68515382928779 , 23.683560678364923, 23.681990286805306}; 
 
 void setup() 
 {
@@ -17,33 +16,35 @@ void setup()
   Serial1.begin(9600, SERIAL_8N1, 21,22); // GPS serial
   Serial2.begin(9600, SERIAL_8N1, 16,17); // SMS serial
 
-  mygprs.Init(Serial2, Serial, "internet.vodafone.gr");
+  mygprs.Init(Serial2, Serial, APN);
 }
 
 void loop() 
 {
-  if (DEMO_MODE)
+  if (mygprs.isReady())
   {
-    String LAT = String(demo_lat, 6);
-    String LNG = String(demo_lng, 6);
-    String content = "LAT="+LAT+"LNG="+LNG;
-    mygprs.doGetRequest(host + content);
-    
-    demo_lat += 0.001;
-    demo_lng += 0.001;
-
-    delay(3000);
-  }
-  else if (mygprs.isReady())
-  {
-    while (Serial1.available() > 0)
+    if (DEMO_MODE) // emulate navigating through points given in demo_lat and demo_lng arrays
     {
-      mygps.encode(Serial1.read());
-      if (mygps.location.isUpdated()){
-        String LAT = String(mygps.location.lat(), 6);
-        String LNG = String(mygps.location.lng(), 6);
+      for (int i = 0; i < 4; i++)
+      {
+        String LAT = String(demo_lat[i], 6);
+        String LNG = String(demo_lng[i], 6);
         String content = "LAT="+LAT+"LNG="+LNG;
         mygprs.doGetRequest(host + content);
+      }
+      delay(3000);
+    }
+    else
+    {
+      while (Serial1.available() > 0)
+      {
+        mygps.encode(Serial1.read());
+        if (mygps.location.isUpdated()){
+          String LAT = String(mygps.location.lat(), 6);
+          String LNG = String(mygps.location.lng(), 6);
+          String content = "LAT="+LAT+"LNG="+LNG;
+          mygprs.doGetRequest(host + content);
+        }
       }
     }
   }

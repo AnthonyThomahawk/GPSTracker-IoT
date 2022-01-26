@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 
-class NetworkManager
+class NetworkManager // class created by Anthony T. (feel free to use it in any of your projects)
 {
   private:
     HardwareSerial * modem;
@@ -11,7 +11,7 @@ class NetworkManager
     String APN;
     bool init = false;
 
-    void modemOutputToDebug()
+    void modemOutputToDebug() // redirect modem stream to debug stream
     {
       while(modem->available() > 0)
       {
@@ -19,7 +19,7 @@ class NetworkManager
       }
     }
 
-    String getResponse()
+    String getResponse() // read response
     {
       String str = "";
       while(modem->available() > 0)
@@ -30,7 +30,7 @@ class NetworkManager
       return str;
     }
 
-    void waitForOK()
+    void waitForOK() // wait for modem to respond OK
     {
       String res = getResponse();
       while (!(res.indexOf("OK") > 0))
@@ -52,7 +52,7 @@ class NetworkManager
       debug->println("INSTANCE STARTING");
       debug->println("Restarting radio...");
 
-      modem->println("AT+CFUN=1,1");
+      modem->println("AT+CFUN=1,1"); // restart radio via software
       delay(1000);
       waitForOK();
       modemOutputToDebug();
@@ -61,7 +61,7 @@ class NetworkManager
       connectTo2G();
     }
 
-    void connectTo2G()
+    void connectTo2G() // connect to GPRS
     {
       modem->println("AT+SAPBR=3,1,Contype,\"GPRS\"");
       delay(100);
@@ -84,9 +84,9 @@ class NetworkManager
     }
 
 
-    bool isReady() { return init; }
+    bool isReady() { return init; } // return state of modem
 
-    void doGetRequest(String host)
+    void doGetRequest(String host) // perform GET request on host
     {
       modem->println("AT+HTTPPARA=CID,\"1\"");
       delay(100);
