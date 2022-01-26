@@ -56,10 +56,10 @@ We used TTGO-LoRa-32 OLED V1 (in Arduino Board manager) which was the closest li
 
 After you successfuly set up your IDE, you are ready to compile the arduino project GPSTrackerMain, download the folder or clone the repo, then open GPSTrackerMain.ino .<br>
             - Change the host URL to the app server (instructions below how to set it up), change "internet.vodafone.gr" to the APN (access point name) of your network provider and change the pins for GSM and GPS modules (in Serial1 and Serial2 variables).<br>
-            - After you compile, make sure you press and the "BOOT" button on your ESP board while uploading and release when upload has finished.
+            - After you compile, make sure you press and hold the "BOOT" button on your ESP board while uploading and release when upload has finished.
             
 The ESP32 microcontroller we just programmed, will send location data to a web app which uses python and mongodb for backend and Flask for front end.<br>
-#### Note : the instructions below are for linux Debian buster or newer
+#### Note : the instructions below are for linux Debian Buster or newer
 b1.*Setting up backend*<br>
   - Make sure python3 is installed on your system. Install it with :<br>
 ```bash
@@ -82,7 +82,7 @@ python3 GPS_server.py
 ```
 You will see the message "HTTP server has started"<br>
 The server runs on port 8000 so you must forward that port in your router.<br>
-#### Portforwarding is necessary because the backend will be accessed from our ESP32 via GSM (so that means it will have a different external IP and not be on the same network as the backend server).<br>
+#### Portforwarding is necessary because the backend will be accessed from our ESP32 via GPRS.<br>
 You must look up how to port forward your own router model, since there are many different router firmwares and settings.<br>
 Your server should now be able to receive data from the ESP32.
 
@@ -105,6 +105,8 @@ flask run
 
 The frontend should now be available at localhost:5000<br>
 To access it, use a web browser and navigate to 127.0.0.1:5000
+
+#### If you want the web app to be accessible from the Internet, you must portforward port 5000 aswell.
 
 # Docs
 To be added
