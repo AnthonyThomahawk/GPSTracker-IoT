@@ -106,7 +106,7 @@ flask run
 The frontend should now be available at localhost:5000<br>
 To access it, use a web browser and navigate to 127.0.0.1:5000
 
-#### If you want the web app to be accessible from the Internet, you must portforward port 5000 aswell.
+#### If you want the web app to be accessible from the Internet, you must forward port 5000 aswell.
 
 # Docs
 To be added
