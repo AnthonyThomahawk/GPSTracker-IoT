@@ -39,7 +39,7 @@ It is recommended to use a power switch for the GSM module.
 The above schematic is specific to my configuration, but in general in every microcontroller you want to connect the RX pin of the module to the TX pin of the microcontroller and vice versa (TX module pin to RX microcontroller pin). 
 #### Also make sure all modules share the same ground.
 
-In my case, the TX and RX pins of the GSM module are 16 and 17, and for the GPS module are 21 and 22, make sure you change them to match your configuration.
+In my case, the microcontroller TX and RX pins for the GSM module are 16 and 17, and for the GPS module are 21 and 22, make sure you change them to match your configuration.
 
 Images of my configuration :
 ![img1](/images/img(1).jpg)
