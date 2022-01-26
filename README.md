@@ -82,9 +82,28 @@ python3 GPS_server.py
 You will see the message "HTTP server has started"<br>
 The server runs on port 8000 so you must forward that port in your router.<br>
 #### Portforwarding is necessary because the backend will be accessed from our ESP32 via GSM (so that means it will have a different external IP and not be on the same network as the backend server).<br>
-You must look up how to port forward your own router model, since there are many different router firmwares and settings.
+You must look up how to port forward your own router model, since there are many different router firmwares and settings.<br>
+Your server should now be able to receive data from the ESP32.
 
+b2.*Setting up frontend*<br>
+The frontend of the web app is fairly easy to run since it is contained in a python virtual environment.<br>
+To run :<br>
+ - Install venv for python 3 with :
+```bash
+sudo pip3 install virtualenv 
+```
+ - CD to the folder "frontend"
+ - Open the venv with :
+```bash
+source venv/bin/activate
+```
+ - Finally, run the frontend with:
+```bash
+flask run
+```
 
+The frontend should now be available at localhost:5000<br>
+To access it, use a web browser and navigate to 127.0.0.1:5000
 
 # Docs
 To be added
