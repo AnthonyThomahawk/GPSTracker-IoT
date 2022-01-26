@@ -3,7 +3,7 @@ The goal is to create a GPS tracking device, that is reliable and easy to use fo
 This is a project for my university course "Internet of things" and [@monkiwi](https://github.com/monkiwi) is my partener. 
 
 # Design & architecture
-The device is based on the ESP32 platform, and utilizes a GSM module to send location data to the user. The device sends the coordinates of the GPS sensor as a GET request to a python HTTP server, which in turn uploads the coordinates to a MongoDB server. There is also a web app that uses HereMAPS api to display the coordinates from mongoDB in a map UI.
+The device is based on the ESP32 platform, and utilizes a GSM module to send location data to the user. The device sends the coordinates of the GPS sensor via a GET request to a python HTTP server, which in turn uploads the coordinates to a MongoDB server. There is also a web app that uses HereMAPS api to display the coordinates from mongoDB in a map UI.
 
 ΙοΤ architecture diagram :
 ![diagram](/images/IOT-diagram.png)
