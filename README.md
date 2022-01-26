@@ -60,11 +60,11 @@ b.*Setting up the Web app (backend and frontend)*<br>
 The ESP32 microcontroller we just programmed, will send location data to a web app which uses python and mongodb for backend and Flask for front end.<br>
 #### Note : the instructions below are for linux Debian buster or newer
 b1.*Setting up backend*<br>
-             - Make sure python3 is installed on your system. Install it with :<br>
+  - Make sure python3 is installed on your system. Install it with :<br>
 ```bash
 sudo apt-get install python3
 ```
-             - Install mongodb from : https://docs.mongodb.com/manual/tutorial/install-mongodb-on-debian/
+  - Install mongodb from : https://docs.mongodb.com/manual/tutorial/install-mongodb-on-debian/
 
 
 sudo apt-get install
