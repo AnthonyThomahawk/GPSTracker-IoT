@@ -47,7 +47,7 @@ Images of my configuration :
 ![img3](/images/img(3).jpg)
 # Software setup
 a.*Setting up Arduino IDE* <br>
-To program our ESP32 microcontroller we need Arduino IDE (you can use esp flashtool but it is not recommended since it is much harder to use).
+To program our ESP32 microcontroller we need Arduino IDE (you can use esp flashtool but it is much harder to use).
 To use Arduino IDE with your ESP32, you must download and install Espressif software and drivers.<br>
     - Follow this guide : https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/<br>
 to install the required software.
