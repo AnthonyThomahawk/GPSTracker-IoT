@@ -108,5 +108,7 @@ To access it, use a web browser and navigate to 127.0.0.1:5000
 
 #### If you want the web app to be accessible from the Internet, you must forward port 5000 aswell.
 
-# Docs
-To be added
+# Demonstration
+In the ESP32 program, there is a demo function that can be activated by setting the macro "DEMO" to 1
+The demo simulates a person walking accross Iera Odos, in Egaleo Greece
+
