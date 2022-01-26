@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title>GPS tracker UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    p {text-align: center;}
+    </style>
+    </head>
+    
+    <img src="{{url_for('static', filename='gpsicon.png')}}" width = "400" height = "350"/>
+    <br>
+    
+    <center><form action="locationhistory.html">
+    <input type="submit" value="Check location history" />
+    </form></center>
+    <br>
+    
+    <center><form action="lastlocation.html">
+    <input type="submit" value="View last location" />
+    </form></center>
+    <br>
+    
+    <center><form action="deletelocationhistory.html">
+    <input type="submit" value="Delete location history" />
+    </form></center>
+    <br>
+    
+    <p>
+        <br><br>
+        Group project for University of West Attica course "Internet of Things"<br>
+        IoT GPS tracker with ESP32 WROOM<br>
+        Anthony T.  <a href="https://github.com/AnthonyThomahawk">Github</a> <br>
+        monkiwi <a href="https://github.com/monkiwi">Github</a> <br>
+    
+    </p>
+</html>
