@@ -73,5 +73,18 @@ sudo apt-get install python3-pip
 ```bash
 python3 pip install pymongo
 ```
+
+After installing all of the above, you are ready to run the backend of the web app.
+navigate to the "backend" folder of the repo, then open a terminal and execute "GPS_server.py"
+```bash
+python3 GPS_server.py
+```
+You will see the message "HTTP server has started"<br>
+The server runs on port 8000 so you must forward that port in your router.
+Portforwarding is necessary because the backend will be accessed from our ESP32 via GSM (so that means it will have an external IP and not be on the same network as the backend server).<br>
+You must look up how to port forward your own router model, since there are many different router firmwares and settings.
+
+
+
 # Docs
 To be added
