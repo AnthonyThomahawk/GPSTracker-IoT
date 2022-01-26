@@ -13,9 +13,9 @@ Note : you can choose different components, this is just what we used to achieve
 a.*Hardware components* <br>
       - WEMOS-ESP32 ESP-WROOM-32 (it was chosen because it includes a pre-soldered battery slot)<br>
       - 18650 Li-Ion Battery (we chose a 2800mAh battery extracted from an old laptop battery pack) <br>
-      - SIM800L module<br>
+      - GSM SIM800L module<br>
       - Power switch for SIM800L module (optional)<br>
-      - GPSMV2 module<br>
+      - GPS 6MV2 module<br>
       - A computer that has atleast 2 GB of RAM and 2 cpu cores, that runs Windows, Linux, MacOS or ChromeOS (for Arduino IDE)<br> 
       - A computer capable of running linux Debian buster or newer, MongoDB and python3 (again, 2GB ram and 2 cores should suffice)<br>
 b.*Software components* <br>
