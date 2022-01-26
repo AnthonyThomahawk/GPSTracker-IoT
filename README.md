@@ -46,7 +46,25 @@ Images of my configuration :
 ![img2](/images/img(2).jpg)
 ![img3](/images/img(3).jpg)
 # Software setup
-To be added
+a.*Setting up Arduino IDE* <br>
+To program our ESP32 microcontroller we need Arduino IDE (you can use esp flashtool but it is not recommended since it is much harder to use).
+To use Arduino IDE with your ESP32, you must download and install Espressif software and drivers.<br>
+- Follow this guide : https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/<br>
+to install the required software.
+
+For my configuration i used TTGO-LoRa-32 OLED V1 (in Arduino Board manager), change this to the board you are using.
+
+After you successfuly set up your IDE, you are ready to compile the arduino project GPSTrackerMain, download the folder or clone the repo, then open GPSTrackerMain.ino .<br>
+- Change the host URL to the app server (instructions below how to set it up), change "internet.vodafone.gr" to the APN (access point name) of your network provider and change the pins for GSM and GPS modules (in Serial1 and Serial2 variables).
+<br><br>
+b.*Setting up the Web app (backend and frontend)*<br>
+The ESP32 microcontroller we just programmed, will send location data to a web app which uses python and mongodb for backend and Flask for front end.<br>
+#### Note : the instructions below are for linux Debian buster or newer
+b1.*Setting up backend*<br>
+- Make sure python3 is installed on your system. Install it with command :<br>
+```bash
+sudo apt-get install python3
+```
 
 # Docs
 To be added
