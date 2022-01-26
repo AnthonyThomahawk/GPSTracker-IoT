@@ -12,7 +12,7 @@ The device is based on the ESP32 platform, and utilizes a GSM module to send loc
 Note : you can choose different components, this is just what we used to achieve the shown results.<br>
 a.*Hardware components* <br>
       - WEMOS-ESP32 ESP-WROOM-32 (it was chosen because it includes a pre-soldered battery slot)<br>
-      - Battery (we chose a 2800mAh battery extracted from an old laptop battery pack) <br>
+      - 18650 Li-Ion Battery (we chose a 2800mAh battery extracted from an old laptop battery pack) <br>
       - SIM800L module<br>
       - Power switch for SIM800L module (optional)<br>
       - GPSMV2 module<br>
