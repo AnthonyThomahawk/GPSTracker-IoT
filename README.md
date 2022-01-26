@@ -11,23 +11,23 @@ The device is based on the ESP32 platform, and utilizes a GSM module to send loc
 # What do you need (to build this for yourself)
 Note : you can choose different components, this is just what we used to achieve the shown results.<br>
 a.*Hardware components* <br>
-- WEMOS-ESP32 ESP-WROOM-32 (it was chosen because it includes a pre-soldered battery slot)<br>
-- Battery (we chose a 2800mAh battery extracted from an old laptop battery pack) <br>
-- SIM800L module<br>
-- Power switch for SIM800L module (optional)<br>
-- GPSMV2 module<br>
-- A computer that has atleast 2 GB of RAM and 2 cpu cores, that runs Windows, Linux, MacOS or ChromeOS (for Arduino IDE)<br> 
-- A computer capable of running linux Debian buster or newer, MongoDB and python3 (again, 2GB ram and 2 cores should suffice)<br>
+    - WEMOS-ESP32 ESP-WROOM-32 (it was chosen because it includes a pre-soldered battery slot)<br>
+    - Battery (we chose a 2800mAh battery extracted from an old laptop battery pack) <br>
+    - SIM800L module<br>
+    - Power switch for SIM800L module (optional)<br>
+    - GPSMV2 module<br>
+    - A computer that has atleast 2 GB of RAM and 2 cpu cores, that runs Windows, Linux, MacOS or ChromeOS (for Arduino IDE)<br> 
+    - A computer capable of running linux Debian buster or newer, MongoDB and python3 (again, 2GB ram and 2 cores should suffice)<br>
 b.*Software components* <br>
-- Arduino IDE https://www.arduino.cc/en/Guide <br>
-- ESP32 software for Arduino IDE https://techexplorations.com/guides/esp32/begin/idewin/ <br>
-- HereMAPS freemium developer account (for API key required in web app) https://developer.here.com/#<br>
-- Debian linux (buster or newer) https://www.debian.org/<br>
-- MongoDB and pymongo driver (instructions below)<br>
-- Flask and python3 (instructions below)<br>
-- My SMS library for ESP32 (SMSmanager.h) <br>
-- My GPRS library for ESP32(NetworkManager.h) <br>
-- TinyGPS++ library written by Mikal Hart https://github.com/mikalhart/TinyGPSPlus<br> 
+    - Arduino IDE https://www.arduino.cc/en/Guide <br>
+    - ESP32 software for Arduino IDE https://techexplorations.com/guides/esp32/begin/idewin/ <br>
+    - HereMAPS freemium developer account (for API key required in web app) https://developer.here.com/#<br>
+    - Debian linux (buster or newer) https://www.debian.org/<br>
+    - MongoDB and pymongo driver (instructions below)<br>
+    - Flask and python3 (instructions below)<br>
+    - My SMS library for ESP32 (SMSmanager.h) <br>
+    - My GPRS library for ESP32(NetworkManager.h) <br>
+    - TinyGPS++ library written by Mikal Hart https://github.com/mikalhart/TinyGPSPlus<br> 
 <br>
     
 # Hardware setup
