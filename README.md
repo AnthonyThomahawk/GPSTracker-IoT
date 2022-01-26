@@ -112,3 +112,13 @@ To access it, use a web browser and navigate to 127.0.0.1:5000
 In the ESP32 program, there is a demo function that can be activated by setting the macro "DEMO" to 1
 The demo simulates a person walking accross Iera Odos, in Egaleo Greece
 
+Screenshot of ESP32 program running (Debugged with PC serial monitor) :
+![img4](/images/COMoutput.png)
+Screenshot of backend and frontend running on Debian :
+![img5](/images/serveroutput.png)
+Screenshot of application interface :
+![img6](/images/viewUI.png)
+View location history:
+![img7](/images/viewlocationhistory.png)
+View last location:
+![img8](/images/viewlastlocation.png)
