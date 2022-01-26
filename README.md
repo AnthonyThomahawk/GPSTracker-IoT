@@ -20,7 +20,7 @@ a.*Hardware components* <br>
       - A computer capable of running linux Debian Buster or newer, MongoDB and python3 (again, 2GB ram and 2 cores should suffice)<br>
 b.*Software components* <br>
       - Arduino IDE https://www.arduino.cc/en/Guide <br>
-      - ESP32 software for Arduino IDE https://techexplorations.com/guides/esp32/begin/idewin/ <br>
+      - ESP32 software for Arduino IDE (guide below) <br>
       - HereMAPS freemium developer account (for API key required in web app) https://developer.here.com/#<br>
       - Debian linux (Buster or newer) https://www.debian.org/<br>
       - MongoDB and pymongo driver (instructions below)<br>
