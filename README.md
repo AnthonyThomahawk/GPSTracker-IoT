@@ -32,7 +32,8 @@ Note : you can choose different components, this is just what we used to achieve
 # Hardware setup
 Connection schematic :
 ![schematic](/images/connectionschematic.jpg)
-
+<br>
+[b] IMPORTANT : Connect the GSM module (SIM800L) directly to the battery, NOT the 5V output of the microcontroller, because it needs a lot more power than ESP32 can provide.[/b]
 # Software setup
 To be added
 
