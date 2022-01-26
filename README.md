@@ -114,6 +114,7 @@ The demo simulates a person walking accross Iera Odos, in Egaleo Greece
 
 Screenshot of ESP32 program running (Debugged with PC serial monitor) :
 ![img4](/images/COMoutput.png)
+<br>
 Screenshot of backend and frontend running on Debian :
 ![img5](/images/serveroutput.png)
 Screenshot of application interface :
