@@ -65,8 +65,13 @@ b1.*Setting up backend*<br>
 sudo apt-get install python3
 ```
   - Install mongodb from : https://docs.mongodb.com/manual/tutorial/install-mongodb-on-debian/
-
-
-sudo apt-get install
+  - Install pip with :
+```bash
+sudo apt-get install python3-pip
+```
+  - Install pymongo with :
+```bash
+python3 pip install pymongo
+```
 # Docs
 To be added
