@@ -37,7 +37,7 @@ Connection schematic : <br>
 The above schematic is specific to my configuration, but in general in every microcontroller you want to connect the RX pin of the module to the TX pin of the microcontroller and vice versa (TX module pin to RX microcontroller pin). 
 #### Also make sure every component has common ground.
 
-
+In my case, the TX and RX pins of the GSM module are 16 and 17, and for the GPS module are 21 and 22, make sure you change them to match your configuration.
 
 
 
