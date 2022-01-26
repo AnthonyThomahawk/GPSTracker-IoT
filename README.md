@@ -33,6 +33,7 @@ Note : you can choose different components, this is just what we used to achieve
 Connection schematic : <br>
 ![schematic](/images/connectionschematic.jpg)
 #### IMPORTANT : Connect the GSM module (SIM800L) directly to the battery, NOT the 5V output of the microcontroller, because it needs a lot more power than ESP32 can provide.
+It is advisable (but optional) to use a power switch for the GSM module.
 
 The above schematic is specific to my configuration, but in general in every microcontroller you want to connect the RX pin of the module to the TX pin of the microcontroller and vice versa (TX module pin to RX microcontroller pin). 
 #### Also make sure every component has common ground.
