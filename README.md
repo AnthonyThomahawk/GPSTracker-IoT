@@ -52,7 +52,7 @@ To use Arduino IDE with your ESP32, you must download and install Espressif soft
     - Follow this guide : https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/<br>
 to install the required software.
 
-For my configuration i used TTGO-LoRa-32 OLED V1 (in Arduino Board manager), change this to the board you are using.
+We used TTGO-LoRa-32 OLED V1 (in Arduino Board manager) which was the closest library to our board, change this to the board you are using.
 
 After you successfuly set up your IDE, you are ready to compile the arduino project GPSTrackerMain, download the folder or clone the repo, then open GPSTrackerMain.ino .<br>
             - Change the host URL to the app server (instructions below how to set it up), change "internet.vodafone.gr" to the APN (access point name) of your network provider and change the pins for GSM and GPS modules (in Serial1 and Serial2 variables).<br>
