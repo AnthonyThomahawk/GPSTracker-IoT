@@ -111,14 +111,10 @@ To access it, use a web browser and navigate to 127.0.0.1:5000
 # Making the app accessible from the Internet
 Port forward the port you want to use for the web app in your router (for example 9000), then launch the app with
 ```bash
-flask run -h MACHINE_LOCAL_IP -p YOUR_PORT
-```
-where MACHINE_LOCAL_IP is the local ip of the machine, to see the local ip in debian you can do :
-```bash
-ip a
+flask run -h 0.0.0.0 -p YOUR_PORT
 ```
 <br>
-and YOUR_PORT is the port you forwarded.
+Where YOUR_PORT is the port you forwarded.
 
 You should now be able to access the app from the Internet.
 
