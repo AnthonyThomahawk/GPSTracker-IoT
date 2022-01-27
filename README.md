@@ -113,7 +113,6 @@ Port forward the port you want to use for the web app in your router (for exampl
 ```bash
 flask run -h MACHINE_LOCAL_IP -p YOUR_PORT
 ```
-<br>
 where MACHINE_LOCAL_IP is the local ip of the machine, to see the local ip in debian you can do :
 ```bash
 ip a
