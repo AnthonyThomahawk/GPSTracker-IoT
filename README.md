@@ -124,7 +124,7 @@ You should now be able to access the app from the Internet.
 
 # Demonstration
 In the ESP32 program, there is a demo function that can be activated by setting the macro "DEMO" to 1
-The demo simulates a person walking accross Iera Odos, in Egaleo Greece
+The demo simulates a person walking accross Iera Odos, in Egaleo Greece.
 
 Screenshot of ESP32 program running (Debugged with PC serial monitor) :
 ![img4](/images/COMoutput.png)
