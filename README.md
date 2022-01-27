@@ -106,7 +106,22 @@ flask run
 The frontend should now be available at localhost:5000<br>
 To access it, use a web browser and navigate to 127.0.0.1:5000
 
-#### If you want the web app to be accessible from the Internet, you must forward port 5000 aswell.
+#### If you want the web app to be accessible from the Internet, you must forward port for the frontend as well.
+
+# Making the app accessible from the Internet
+Port forward the port you want to use for the web app in your router (for example 9000), then launch the app with
+```bash
+flask run -h MACHINE_LOCAL_IP -p YOUR_PORT
+```
+<br>
+where MACHINE_LOCAL_IP is the local ip of the machine, to see the local ip in debian you can do :
+```bash
+ip a
+```
+<br>
+and YOUR_PORT is the port you forwarded.
+
+You should now be able to access the app from the Internet.
 
 # Demonstration
 In the ESP32 program, there is a demo function that can be activated by setting the macro "DEMO" to 1
