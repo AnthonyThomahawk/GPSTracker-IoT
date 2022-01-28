@@ -72,7 +72,7 @@ sudo apt-get install python3-pip
 ```
   - Install pymongo with :
 ```bash
-python3 pip install pymongo
+python3 -m pip install pymongo
 ```
 
 After installing all of the above, you are ready to run the backend of the web app.
