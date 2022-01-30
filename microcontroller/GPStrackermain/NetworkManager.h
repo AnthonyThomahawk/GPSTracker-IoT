@@ -72,12 +72,12 @@ class NetworkManager // class created by Anthony T. (feel free to use it in any 
       modemOutputToDebug();
 
       modem->println("AT+SAPBR=1,1");
-      delay(1000);
+      delay(5000);
       modemOutputToDebug();
 
       delay(500);
       modem->println("AT+HTTPINIT");
-      delay(100);
+      delay(1500);
       modemOutputToDebug();
 
       init = true;

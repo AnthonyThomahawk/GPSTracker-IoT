@@ -1,11 +1,11 @@
 #include "NetworkManager.h"
 #include "TinyGPS++.h"
 
-#define DEMO_MODE 1
+#define DEMO_MODE 0
 
 NetworkManager mygprs;
 TinyGPSPlus mygps;
-const String host = "http://79.167.172.232:8000/"; // change this to your external IP
+const String host = "http://iotgps.duckdns.org:8000/"; // change this to your external IP
 const String APN = "internet.vodafone.gr";
 float demo_lat[4] = {37.990551610988796, 37.99063531638939, 37.99102394735534, 37.991394639604096};
 float demo_lng[4] = {23.685783503223963, 23.68515382928779 , 23.683560678364923, 23.681990286805306}; 
@@ -38,12 +38,15 @@ void loop()
     {
       while (Serial1.available() > 0)
       {
-        mygps.encode(Serial1.read());
-        if (mygps.location.isUpdated()){
-          String LAT = String(mygps.location.lat(), 6);
-          String LNG = String(mygps.location.lng(), 6);
-          String content = "LAT="+LAT+"LNG="+LNG;
-          mygprs.doGetRequest(host + content);
+        if (mygprs.isReady())
+        {
+          mygps.encode(Serial1.read());
+          if (mygps.location.isUpdated()){
+            String LAT = String(mygps.location.lat(), 6);
+            String LNG = String(mygps.location.lng(), 6);
+            String content = "LAT="+LAT+"LNG="+LNG;
+            mygprs.doGetRequest(host + content);
+          }
         }
       }
     }
