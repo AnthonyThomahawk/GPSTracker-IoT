@@ -106,7 +106,11 @@ flask run
 The frontend should now be available at localhost:5000<br>
 To access it, use a web browser and navigate to 127.0.0.1:5000
 
-#### If you want the web app to be accessible from the Internet, you must forward port for the frontend as well.
+#### Make sure you do
+```bash
+systemctl start mongodb
+```
+#### to start the mongodb service, before you launch the frontend and backend
 
 # Making the app accessible from the Internet
 Port forward the port you want to use for the web app in your router (for example 9000), then launch the app with
